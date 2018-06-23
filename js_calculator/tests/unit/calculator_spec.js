@@ -51,6 +51,7 @@ describe('calculator', function () {
   // })
 
   it('it can clear the selected number', function(){
+    calculator.numberClick(5);
     calculator.clearClick();
     assert.equal(calculator.runningTotal, 0)
   })
