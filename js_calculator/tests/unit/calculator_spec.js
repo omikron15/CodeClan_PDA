@@ -56,4 +56,12 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 0)
   })
 
+  it('it should return an error if a divide by zero is attempted', function(){
+    calculator.numberClick(5);
+    calculator.operatorClick('/')
+    calculator.numberClick(0);
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, "err")
+  })
+
 });
